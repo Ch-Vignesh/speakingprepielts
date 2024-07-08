@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Speaking Test Support</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>IELTS Speaking Test Support</h1>
+    </header>
+    <main class="main">
+        <section class="about">
+            <h2>Boost Your IELTS Speaking Score</h2>
+            <p>Get the support you need to ace your IELTS speaking test. We offer mock interviews, tips and tricks, and more to help you feel confident and prepared.</p>
+        </section>
+        <section class="booking">
+            <h2>Book Your Mock Interview Slot</h2>
+            <form id="booking-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="time">Time:</label>
+                <select id="time" name="time" required>
+                    <option value="">Select Time</option>
+                    <option value="9:00">9:00 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="1:00">1:00 PM</option>
+                </select>
+                <button type="submit">Book Now</button>
+            </form>
+            <p id="booking-message"></p>
+        </section>
+        <section class="resources">
+            <h2>Tips and Tricks</h2>
+            <p>Check out our resources to learn valuable tips and tricks to improve your IELTS speaking skills.</p>
+            <a href="#">Mock Interview Examples</a>
+            <a href="#">Common Mistakes to Avoid</a>
+            <a href="#">Band Descriptors Explained</a>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 IELTS Speaking Test Support</p>
+    </footer>
+    <script>
+        const form = document.getElementById('booking-form');
+        const message = document.getElementById('booking-message');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            // Simulate successful booking (replace with actual booking logic)
+            message.textContent = `Your mock interview has been booked for ${name} on ${date} at ${time}. We'll send you a confirmation email shortly.`;
+
+            form.reset();
+        });
+    </script>
+</body>
+</html>
